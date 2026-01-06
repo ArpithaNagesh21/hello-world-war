@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'slave1' }
     stages {
         stage('Checkout') {
             steps {
@@ -7,17 +7,6 @@ pipeline {
                sh 'git clone https://github.com/Mallesha3/hello-world-war'
             }
         }
-        stage('Build') {
-            steps {
-                    sh '''
-                    pwd
-                    ls
-                    cd hello-world-war
-                    pwd
-                    ls
-                    mvn clean package
-                '''
-            }
-        }
+        
     }
 }
