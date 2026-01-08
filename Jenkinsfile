@@ -9,7 +9,7 @@ agent any
  
 withCredentials([
                     usernamePassword(
-                        credentialsId: 'b2872426-b5e9-4d69-b561-e06fac549560',
+                        credentialsId: '2777c556-6462-457c-87ba-b1776bb79642',
                         usernameVariable: 'USERNAME',
                         passwordVariable: 'PASSWORD'
                     )
