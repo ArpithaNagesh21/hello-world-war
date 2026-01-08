@@ -9,7 +9,8 @@ agent any
    stages {
         stage('Checkout') {
             steps {
-                   sh 'echo welcome' 
+                   sh 'echo welcome'
+                   sh 'echo $CMD $RUN_TESTS $CMD1'
             }
         }
         
