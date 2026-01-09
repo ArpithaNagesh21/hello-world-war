@@ -11,7 +11,7 @@
 
              withCredentials([
                     usernamePassword(
-                        credentialsId: '9c077ca7-41a4-4545-a2b8-f0187fd29c66',
+                        credentialsId: 'Git',
                         usernameVariable: 'USERNAME',
                         passwordVariable: 'PASSWORD'
                     )
