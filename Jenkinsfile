@@ -3,10 +3,8 @@ pipeline {
   agent any 
 
     stages {
-     parallel {
-      stage('Checkout')
-     }
-        stage('Checkout') {
+    
+       stage('Checkout') {
             //agent { label 'Java_Env' }
             steps {
 
