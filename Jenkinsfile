@@ -21,7 +21,7 @@
              sh 'echo $CMD $RUN_TESTS $CMD1'
              sh 'echo $USERNAME $PASSWORD'
                 //sh 'rm -rf *'
-                //sh 'git clone https://github.com/Mallesha3/hello-world-war'
+                //sh 'git clone https://github.com/ArpithaNagesh21/hello-world-war.git'
             }
             }
         }
