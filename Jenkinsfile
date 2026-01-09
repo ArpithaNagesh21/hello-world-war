@@ -1,5 +1,6 @@
+pipeline {
 //agent { label 'Java_Env' }
-  //  agent none
+  agent any 
 
     stages {
      parallel {
@@ -18,7 +19,6 @@
                 ])
              {
               sh 'echo welcome'
-             sh 'echo $CMD $RUN_TESTS $CMD1'
              sh 'echo $USERNAME $PASSWORD'
                 //sh 'rm -rf *'
                 //sh 'git clone https://github.com/ArpithaNagesh21/hello-world-war.git'
@@ -26,4 +26,4 @@
             }
         }
     }
-
+}
