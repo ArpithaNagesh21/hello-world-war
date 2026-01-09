@@ -1,28 +1,22 @@
-pipeline {
-agent any
+//agent { label 'Java_Env' }
+  //  agent none
 
- parameters {
-        string(name: 'CMD', defaultValue: 'cd', description: 'command used to run or to build application')
-        booleanParam(name: 'RUN_TESTS', defaultValue: false, description: 'Run tests?')
-        choice(name: 'CMD1', choices: ['clean', 'validate', 'compile'], description: 'test package deploy')
-    }
- 
-withCredentials([
+    stages {
+     parallel {
+      stage('Checkout')
+     }
+        stage('Checkout') {
+            //agent { label 'Java_Env' }
+            steps {
+
+             withCredentials([
                     usernamePassword(
                         credentialsId: '9c077ca7-41a4-4545-a2b8-f0187fd29c66',
                         usernameVariable: 'USERNAME',
                         passwordVariable: 'PASSWORD'
                     )
                 ])
-
- //agent { label 'Java_Env' }
-  //  agent none
-
-    stages {
-      stage('Checkout') {
-            //agent { label 'Java_Env' }
-            steps {
-             
+             {
               sh 'echo welcome'
              sh 'echo $CMD $RUN_TESTS $CMD1'
              sh 'echo $USERNAME $PASSWORD'
@@ -32,3 +26,4 @@ withCredentials([
             }
         }
     }
+}
