@@ -16,7 +16,7 @@ agent any
             steps {
                 
                 sh 'rm -rf *'
-                sh 'git clone https://github.com/Mallesha3/hello-world-war'
+                sh 'git clone https://github.com/ArpithaNagesh21/hello-world-war.git'
             }
         }
     
